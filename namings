@@ -1,29 +1,70 @@
-Prc 1 
-A  Calucluator
-B login 
-3  jdbc
+Prac 1
+1A Create a simple calculator application using servlet.
+1B Create a servlet for a login page. If the username and password are correct then it says message “Hello <username>” else a message “login failed”
+1C Create a registration servlet in Java using JDBC. Accept the details such as Username, Password, Email, and Country from the user using HTML Form and store the registration details in the database.
+create table user(username varchar(20) PRIMARY KEY, password varchar(20), email varchar(50), country varchar(20));
+insert into user values ('sophia','spd@24',’dcruzsophia24@gmail.com','India');
 
-Prc 2
-A  request dispatchers
-B create a servlet that cookies
-C create a servlet demonstrate 
+prac 2
+2A:  Using Request Dispatcher Interface create a Servlet which will validate the password entered by the user, if the user has entered "Servlet" as password, then he will be forwarded to Welcome Servlet else the user will stay on the index.html page and an error message will be displayed.
+2B: Create a servlet that uses Cookies to store the number of times a user has visited servlet.
+2C: Create a servlet demonstrating the use of session creation and destruction. Also check whether the user has visited this page first time or has visited earlier also using sessions.
 
-Pr 3
-A  upload and download file 
+Prac 3 
+AIM: Create a Servlet application to upload and download a file.
 
-Prac 4
-A jsp appl display value
-B  ......... pass values 
-C registration and login jsp
+Prac4 : jsp
+4A: Develop a simple JSP application to display values obtained from the use of intrinsic objects of various types.
+4B: Develop a simple JSP application to pass values from one page to another with validations. (Name-txt, age-txt, hobbies-checkbox, email-txt, gender-radio button).
+4C: Create a registration and login JSP application to register and authenticate the user based on username and password using JDBC.
+Create table users( id int AUTO_INCREMENT PRIMARY KEY,
+                			Username VARCHAR(50) NOT NULL,
+                   Password VARCHAR(50) NOT NULL,
+                		 	Email VARCHAR(50),
+                			Country VARCHAR(50)):
 
-Prc 5
-A eno, name , age.... 
-B jsp demon. the use of expression language
-C ....... Use of jstl
+Practical no 5
+AIM: Create an html page with fields, eno, name, age, desg, salary. Now on submit this
+data to a JSP page which will update the employee table of database with matching eno.
+CREATE TABLE employee (
+                  eno INT PRIMARY KEY,
+                  name VARCHAR(100),
+                  age INT,
+                  designation VARCHAR(50),
+                  salary DECIMAL(10, 2)
+                  );
+INSERT INTO employee (eno, name, age, designation, salary) VALUES
+                            (101, ‘VINAY CHIVILKAR, 23, 'Software Engineer', 22000.00),
+                            (102, ‘Ankit Rawat’, 28, 'Project Manager', 75000.00),
+                            (103, SHIVAM CHIVILKAR, 35, 'Team Lead', 65000.00);
+5B: Create a JSP page to demonstrate the use of Expression language.
+5C: Create a JSP application to demonstrate the use of JSTL.
 
-Prc 6
-A Ejb
-B room reservation system apll using ejb'
- prac 7
+PRACTICAL 6
+6A: Create a Currency Converter application using EJB.
+6B: Develop a Simple Room Reservation System Application Using EJB.
+CREATE TABLE book (
+                       roomId INT AUTO_INCREMENT PRIMARY KEY,
+                       RoomType VARCHAR(50),
+                       cust VARCHAR(100) DEFAULT '',
+                       mob VARCHAR(15) DEFAULT '',
+                       status VARCHAR(20) DEFAULT 'Not Booked',
+                       charges DECIMAL(10, 2)
+                       );
+INSERT INTO book (RoomType, status, charges) VALUES ('Single', 'Not Booked', 1500.00),
+                        ('Double', 'Not Booked', 2500.00),
+                        ('Delux', 'Not Booked', 3500.00),
+                        ('Super', 'Not Booked', 4500.00),
+                        ('Single', 'Not Booked', 1500.00),
+                        ('Double', 'Not Booked', 2500.00),
+                        ('Delux', 'Not Booked', 3500.00),
+                        ('Super', 'Not Booked', 4500.00);
 
-A Develop simple EJB application to demonstrate Servlet Hit count using Singleton Session Beans.
+PRACTICAL 7
+7A:Develop simple EJB application to demonstrate Servlet Hit count using Singleton
+Session Beans.
+7C: Develop simple Marks Entry Application to demonstrate accessing Databaseusing EJB.
+
+PRACTICAL 8
+AIM: Develop a five page web application site using any two or three Java EE
+Technologies.
